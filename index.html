@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Barbórka</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+            background-image: url(barbórka.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+		}
+		h1 {
+			color: #ffffff;
+			text-align: center;
+			margin-top: 50px;
+            animation: spin 10s infinite linear;
+		}
+		#coal {
+			position: absolute;
+			animation: falling 5s linear infinite;
+            height: 100px;
+            width: 100px;
+		}
+        #coal2 {
+            position: absolute;
+			animation: falling2 5s linear infinite;
+            height: 100px;
+            width: 100px;
+        }
+        p {
+            animation: color-change 20s infinite;
+        }
+		@keyframes falling {
+			0% {
+				top: -100px;
+			}
+			100% {
+				top: 100%;
+			}
+		}
+        @keyframes falling2 {
+			0% {
+				bottom: -100px;
+			}
+			100% {
+				bottom: 100%;
+			}
+		}
+        @keyframes color-change {
+			0% {
+				color: red;
+			}
+			10% {
+				color: orange;
+			}
+			20% {
+				color: yellow;
+			}
+			30% {
+				color: green;
+			}
+			40% {
+				color: blue;
+			}
+			50% {
+				color: indigo;
+			}
+			60% {
+				color: violet;
+			}
+			70% {
+				color: red;
+			}
+			80% {
+				color: orange;
+			}
+			90% {
+				color: yellow;
+			}
+			100% {
+				color: green;
+			}
+		}
+        @keyframes spin {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Barbórka</h1>
+    <script>
+		var speed = 10;
+		setInterval(function() {
+			speed -= 0.1;
+			document.querySelector('h1').style.animationDuration = speed + 's';
+		}, 1000);
+	</script>
+    <div>
+	    <img id="coal" src="coal.png" alt="Spadający węgiel">
+        <img id="coal2" src="coal.png" alt="Spadający węgiel" style="left: 200px;">
+        <img id="coal" src="coal.png" alt="Spadający węgiel" style="left: 400px;">
+        <img id="coal2" src="coal.png" alt="Spadający węgiel" style="left: 600px;">
+        <img id="coal" src="coal.png" alt="Spadający węgiel" style="left: 800px;">
+        <img id="coal2" src="coal.png" alt="Spadający węgiel" style="left: 1000px;">
+    </div>
+    
+    <p>
+        Święto to obchodzone jest 4 grudnia każdego roku i jest związane z kultem św. Barbary z Nikomedii, która jest patronką górników i osób związanych z wydobyciem.
+        Historia tego święta sięga średniowiecza, kiedy to na ziemiach polskich obchodzono jej wspomnienie właśnie na początku grudnia. W czasach PRL-u Dzień Górnika był natomiast obchodzony na szczeblu państwowym. W tym czasie zaczęto również organizować tzw. karczmy piwne. Obecnie w Dniu Górnika w wielu miastach organizowane są koncerty, występy artystyczne oraz inne wydarzenia towarzyszące.
+    </p>
+
+    <embed src="barbórka.mp3" autostart="true" loop="true" width="0" height="0">
+      
+    
+</body>
+</html>
